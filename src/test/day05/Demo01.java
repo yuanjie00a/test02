@@ -6,7 +6,6 @@ public class Demo01 {
     public static void main(String[] args) {
         new Demo01().start();
     }
-
     public void start() {
         CountDownThread thread1 = new CountDownThread();
         CountDownThread thread2 = new CountDownThread();
@@ -19,7 +18,6 @@ public class Demo01 {
         }
         System.out.println("i=" + i);
     }
-
 
     class CountDownThread extends Thread {
         @Override

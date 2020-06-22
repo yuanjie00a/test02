@@ -1,5 +1,7 @@
 package test.day01;
 
+import javax.lang.model.element.VariableElement;
+
 public class Test01 {
     public static void main(String[] args) {
    /*     A a;
@@ -15,22 +17,35 @@ public class Test01 {
     }
 
 }
-class A{
+
+class A {
     public static void main(String[] args) {
 
     }
+
     {
         System.out.println("A的构造代码块");
     }
-    public  static  int a=100;
- /*  private static C c=new C();*/
+
     public A() {
         System.out.println("A构造函数");
+        System.out.println(a);
+        System.out.println(b);
     }
+    private static A aa=new A();
+    private O o=new O();
+    //private static C c=new C();
+
+
     static {
         System.out.println("A的静态代码块");
+        //System.out.println(a);
+        //System.out.println(b);
     }
-    private static C c=new C();
+    /*private static C c=new C();*/
+    public static int a = 100;
+    public  int b = 100;
+
 }
 class C extends A{
     public static void main(String[] args) {
@@ -132,15 +147,23 @@ class FR{
         C的构造函数
 
         * */
-        A a = new A();/*C静态代码块
-A的构造代码块
-A构造函数
-C的构造代码块
-C的构造函数
-A的静态代码块
-A的构造代码块
-A构造函数*/
+        A a = new A();/*
+        A的静态代码块
+        C静态代码块
+        A的构造代码块
+        A构造函数
+        C的构造代码块
+        C的构造函数
+        A的构造代码块
+        A构造函数
+        aaa*/
+
         System.out.println("aaa");
     }
         }
 
+class O{
+    O(){
+        System.out.println("ooooo");
+    }
+}

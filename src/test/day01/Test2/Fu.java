@@ -18,7 +18,7 @@ Fu(){
 }
 class Zi extends Fu{
     Zi(){
-        super(3);
+        //super(3);
         System.out.println("子类的构造函数");
         look();
     }

@@ -2,6 +2,7 @@ package test.day01;
 
 public class Test05 {
     public static void main(String[] args) {
+        System.out.println("111");
         System.out.println(getAll(4));
     }
     public  static int getAll(int a){

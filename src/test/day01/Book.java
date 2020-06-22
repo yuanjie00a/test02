@@ -6,28 +6,28 @@ public class Book {
     public static void main(String[] args)
     {
         /*staticFunction();*/
-
+       // Book book = new Book();
     }
 
     static Book book = new Book();
 
     static
     {
-        System.out.println("书的静态代码块");
+        System.out.println("书的静态代码块");//2
     }
 
-    {
-        System.out.println("书的普通代码块");
-    }
 
     Book()
     {
         System.out.println("书的构造方法");
-        System.out.println("price=" + price +",amount=" + amount);
+        System.out.println("price=" + price +",amount=" + amount);//0/112
+    }
+    {
+        System.out.println("书的普通代码块");
     }
 
     public static void staticFunction(){
-        System.out.println("书的静态方法");
+        System.out.println("书的静态方法");//1
     }
 
     int price = 110;
@@ -36,11 +36,11 @@ public class Book {
     class AA{
     public static void main(String[] args) {
         Book book = new Book();
-        Book books = new Book();
-        System.out.println(book==books);
+   /*     Book books = new Book();*/
+        /*System.out.println(book==books);
         System.out.println(book.equals(books));
         System.out.println(books);
-        System.out.println(book);
+        System.out.println(book);*/
 
     }
 }
